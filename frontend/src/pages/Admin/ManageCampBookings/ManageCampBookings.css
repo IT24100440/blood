@@ -1,0 +1,483 @@
+.admin-main h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Camps Grid */
+.camps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.camp-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.camp-card:hover {
+  border-color: #d32f2f;
+  box-shadow: 0 4px 16px rgba(211, 47, 47, 0.2);
+  transform: translateY(-2px);
+}
+
+.camp-card .camp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.camp-card h3 {
+  color: #333;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.camp-date {
+  background: #f5f5f5;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.camp-card .camp-details {
+  margin: 1rem 0;
+}
+
+.camp-details p {
+  margin: 0.6rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.camp-details strong {
+  color: #333;
+}
+
+.btn-view {
+  width: 100%;
+  padding: 0.8rem;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.btn-view:hover {
+  background: #b71c1c;
+}
+
+/* Camp Header Section */
+.camp-header-section {
+  margin-bottom: 2rem;
+}
+
+.btn-back {
+  padding: 0.6rem 1.2rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-back:hover {
+  background: #5a6268;
+}
+
+.camp-header-section h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.camp-header-section p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Status Cards */
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.status-card {
+  background: white;
+  border-left: 4px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.status-card.registered-card {
+  border-left-color: #ffc107;
+}
+
+.status-card.attended-card {
+  border-left-color: #28a745;
+}
+
+.status-card.cancelled-card {
+  border-left-color: #dc3545;
+}
+
+.status-card.noshow-card {
+  border-left-color: #6c757d;
+}
+
+.status-icon {
+  font-size: 2rem;
+}
+
+.status-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.status-info p {
+  margin: 0.2rem 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Bookings List */
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.booking-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.donor-info h3 {
+  margin: 0;
+  color: #333;
+}
+
+.donor-info .nic {
+  margin: 0.3rem 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.booking-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.detail-row .value {
+  color: #666;
+}
+
+.blood-badge {
+  background: #ffebee;
+  color: #d32f2f;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+.btn-details {
+  padding: 0.8rem 1.5rem;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.btn-details:hover {
+  background: #0b5ed7;
+}
+
+.btn-details:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.donor-section,
+.booking-section {
+  margin-bottom: 2rem;
+}
+
+.donor-section h3,
+.booking-section h3 {
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.detail p {
+  margin: 0;
+  color: #333;
+}
+
+.blood-type {
+  background: #ffebee;
+  color: #d32f2f;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.modal-actions {
+  padding: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #218838;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-warning:hover:not(:disabled) {
+  background: #e0a800;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #5a6268;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.no-data-message {
+  background: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #666;
+  margin: 2rem 0;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .camps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

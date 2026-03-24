@@ -1,0 +1,181 @@
+/* ===== BLOOD UNITS PAGE ===== */
+.blood-units-page {
+  background: var(--light-bg);
+  min-height: 100vh;
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.units-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.units-header h1 {
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.units-header p {
+  color: var(--gray-dark);
+  font-size: var(--font-size-lg);
+}
+
+/* ===== UNITS TABLE CONTAINER ===== */
+.units-table-container {
+  overflow-x: auto;
+  margin-top: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background: var(--white);
+}
+
+.units-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+
+/* ===== TABLE HEADER ===== */
+.units-table thead {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.units-table th {
+  padding: var(--spacing-lg);
+  text-align: left;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== TABLE BODY ===== */
+.units-table tbody tr {
+  border-bottom: 1px solid var(--gray-light);
+  transition: all var(--transition-base);
+}
+
+.units-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(230, 57, 70, 0.05), transparent);
+  transform: scale(1.01);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.units-table td {
+  padding: var(--spacing-lg);
+  color: var(--dark-text);
+  font-size: var(--font-size-base);
+}
+
+.units-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* ===== BLOOD TYPE BADGE ===== */
+.blood-type-label {
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  display: inline-block;
+  min-width: 60px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  box-shadow: var(--shadow-sm);
+  font-size: var(--font-size-base);
+}
+
+/* ===== STOCK STATUS ===== */
+.stock-normal {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.low-stock {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.medium-stock {
+  color: var(--warning);
+  font-weight: 700;
+}
+
+/* ===== STATUS INDICATOR ===== */
+.stock-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.indicator-dot.good {
+  background: var(--success);
+}
+
+.indicator-dot.warning {
+  background: var(--warning);
+}
+
+.indicator-dot.critical {
+  background: var(--danger);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.units-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  padding: var(--spacing-xl);
+  border-top: 1px solid var(--gray-light);
+}
+
+.units-actions .btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .units-table {
+    font-size: var(--font-size-sm);
+  }
+
+  .units-table th,
+  .units-table td {
+    padding: var(--spacing-md);
+  }
+
+  .units-table th {
+    font-size: var(--font-size-sm);
+  }
+
+  .blood-type-label {
+    min-width: 50px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .units-actions {
+    flex-direction: column;
+  }
+
+  .units-actions .btn {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

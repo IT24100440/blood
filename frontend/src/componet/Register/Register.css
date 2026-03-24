@@ -1,0 +1,158 @@
+/* ===== REGISTER PAGE ===== */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+  padding: var(--spacing-lg);
+  font-family: var(--font-primary);
+}
+
+/* ===== REGISTER CONTAINER ===== */
+.register-container {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid var(--secondary);
+}
+
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(29, 53, 87, 0.05);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+/* ===== REGISTER HEADER ===== */
+.register-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--dark-text);
+  position: relative;
+  z-index: 2;
+}
+
+.register-header h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--secondary-dark);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.register-header p {
+  color: var(--gray-dark);
+  font-size: var(--font-size-base);
+  margin: 0;
+}
+
+.register-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+/* ===== FORM GROUPS ===== */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  color: var(--dark-text);
+  font-size: var(--font-size-base);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-family: var(--font-primary);
+  box-sizing: border-box;
+  transition: all var(--transition-base);
+  background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(29, 53, 87, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--gray-medium);
+}
+
+/* ===== REGISTER BUTTON ===== */
+.register-btn {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-md);
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.register-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== LOGIN LINK ===== */
+.login-link {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  font-size: var(--font-size-base);
+  position: relative;
+  z-index: 2;
+}
+
+.login-link a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.login-link a:hover {
+  color: var(--secondary-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .register-container {
+    padding: var(--spacing-xl);
+  }
+
+  .register-header h2 {
+    font-size: var(--font-size-xl);
+  }
+}

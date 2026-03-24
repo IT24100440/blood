@@ -1,0 +1,145 @@
+.admin-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.admin-main {
+  flex: 1;
+  margin-left: 280px;
+  margin-top: 60px;
+  padding: var(--spacing-xl);
+  background: var(--light-bg);
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  color: #333;
+  margin: 0;
+}
+
+.admin-header p {
+  color: #666;
+  margin: 0.5rem 0 0 0;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%);
+  border-left: 4px solid #ffc107;
+}
+
+.stat-card.highlight:hover {
+  box-shadow: 0 8px 16px rgba(255, 193, 7, 0.3);
+}
+
+.stat-card.highlight .stat-content h3 {
+  color: #ff6b6b;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-content h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #dc3545;
+}
+
+.stat-content p {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.action-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-section h2 {
+  color: #dc3545;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action-buttons .btn {
+  padding: 0.8rem;
+  text-align: left;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.action-buttons .btn:hover {
+  opacity: 0.9;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .admin-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+}

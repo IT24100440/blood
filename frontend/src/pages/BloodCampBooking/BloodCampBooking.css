@@ -1,0 +1,665 @@
+/* ===== BLOOD CAMP BOOKING PAGE ===== */
+.camp-booking-container {
+  max-width: 1200px;
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-md);
+  min-height: 70vh;
+}
+
+.camp-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.camp-header h1 {
+  color: var(--primary-dark);
+  font-size: var(--font-size-3xl);
+  margin: 0 0 var(--spacing-md) 0;
+  font-weight: 700;
+}
+
+.camp-header p {
+  color: var(--gray-dark);
+  font-size: var(--font-size-lg);
+}
+
+/* ===== DONOR SEARCH SECTION ===== */
+.donor-search-section {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  border-top: 5px solid var(--primary);
+}
+
+.donor-search-section h2 {
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-form {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
+}
+
+.search-hint {
+  color: var(--gray-dark);
+  margin-top: var(--spacing-lg);
+  font-size: var(--font-size-base);
+}
+
+.search-hint a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.search-hint a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DONOR INFO SECTION ===== */
+.donor-info-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.donor-card {
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(102, 187, 106, 0.1) 100%);
+  border-left: 5px solid var(--success);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border-top: 1px solid rgba(46, 125, 50, 0.2);
+}
+
+.donor-card h3 {
+  color: var(--success);
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.donor-card p {
+  margin: var(--spacing-sm) 0;
+  color: var(--dark-text);
+}
+
+.donor-card .blood-badge {
+  background: var(--primary);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  margin-left: var(--spacing-sm);
+}
+
+.eligible-yes {
+  color: var(--success);
+  font-weight: 700;
+  margin-left: var(--spacing-sm);
+}
+
+.eligible-no {
+  color: var(--danger);
+  font-weight: 700;
+  margin-left: var(--spacing-sm);
+}
+
+/* ===== BOOKING MESSAGE ===== */
+.booking-message {
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(102, 187, 106, 0.1) 100%);
+  color: var(--success);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid var(--success);
+  animation: slideIn 0.3s ease;
+  font-weight: 600;
+}
+
+/* ===== CAMPS SECTION ===== */
+.camps-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.camps-section h2 {
+  color: var(--dark-text);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-xl);
+}
+
+.camps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.camp-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--primary);
+}
+
+.camp-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+}
+
+.camp-card.booked {
+  opacity: 0.7;
+  background: var(--gray-light);
+}
+
+.camp-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--spacing-lg);
+  background: var(--light-bg);
+  border-bottom: 2px solid var(--gray-light);
+}
+
+.camp-header-card h3 {
+  margin: 0;
+  color: var(--dark-text);
+  flex: 1;
+  font-weight: 700;
+}
+
+.booked-badge {
+  background: var(--success);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.camp-details {
+  padding: var(--spacing-lg);
+  flex: 1;
+}
+
+.camp-details p {
+  margin: var(--spacing-sm) 0;
+  color: var(--gray-dark);
+  font-size: var(--font-size-base);
+}
+
+.camp-details strong {
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+.camp-footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--gray-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.max-donors {
+  color: var(--gray-dark);
+  font-size: var(--font-size-sm);
+}
+
+.status-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.booked-status {
+  background: rgba(46, 125, 50, 0.15);
+  color: var(--success);
+}
+
+.not-eligible {
+  background: rgba(198, 40, 40, 0.15);
+  color: var(--danger);
+}
+
+.btn-book {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 700;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-book:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.no-camps {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  color: var(--gray-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.no-camps p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+/* ===== MODAL STYLES ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  padding: var(--spacing-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.donor-card .blood-badge {
+  background: #dc3545;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.eligible-yes {
+  color: #28a745;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.eligible-no {
+  color: #dc3545;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+/* Booking Message */
+.booking-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #28a745;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Camps Section */
+.camps-section {
+  margin-bottom: 3rem;
+}
+
+.camps-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.camps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.camp-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.camp-card:hover {
+  border-color: #dc3545;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+  transform: translateY(-5px);
+}
+
+.camp-card.booked {
+  opacity: 0.8;
+  background: #f9f9f9;
+}
+
+.camp-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.camp-header-card h3 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.booked-badge {
+  background: #28a745;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.camp-details {
+  padding: 1rem;
+  flex: 1;
+}
+
+.camp-details p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.camp-details strong {
+  color: #333;
+}
+
+.camp-footer {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.max-donors {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.booked-status {
+  background: #d4edda;
+  color: #155724;
+}
+
+.not-eligible {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-book {
+  padding: 0.6rem 1.2rem;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-book:hover {
+  background: #0b5ed7;
+}
+
+.no-camps {
+  background: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #666;
+}
+
+.no-camps p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.modal-content h2 {
+  color: #333;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 2px solid #dc3545;
+  padding-bottom: 1rem;
+}
+
+.booking-details {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.booking-details h3 {
+  color: #dc3545;
+  margin: 0 0 1rem 0;
+}
+
+.booking-details p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.availability-info {
+  background: #e8f4f8;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #0d6efd;
+}
+
+.availability-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #0d6efd;
+}
+
+.availability-info p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.availability-bar {
+  width: 100%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.availability-bar .filled {
+  height: 100%;
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+  transition: width 0.3s;
+}
+
+.remaining {
+  font-weight: bold;
+  color: #333;
+}
+
+.donor-confirmation {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.donor-confirmation p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-buttons .btn {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.modal-buttons .btn-primary {
+  background: #28a745;
+  color: white;
+}
+
+.modal-buttons .btn-primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.modal-buttons .btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.modal-buttons .btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.modal-buttons .btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .camp-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .camps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .camp-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+  }
+}

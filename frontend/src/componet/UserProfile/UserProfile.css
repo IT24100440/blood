@@ -1,0 +1,108 @@
+
+/* UserProfile.css */
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  padding-top: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.profile-header {
+  background-color: #007bff;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-body {
+  padding: 30px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+}
+
+.value {
+  color: #333;
+}
+
+/* Button Group */
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-update {
+  flex: 2;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-update:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  flex: 1;
+  padding: 12px;
+  background-color: #fff;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Loading/Error states */
+.status-message {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #666;
+}
+
+
+

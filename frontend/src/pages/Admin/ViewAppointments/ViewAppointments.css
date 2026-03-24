@@ -1,0 +1,13 @@
+.filter-select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
