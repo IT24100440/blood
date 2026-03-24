@@ -47,7 +47,7 @@ function ManageHospitals() {
   };
 
   const validateForm = () => {
-    // validate hospital input fields before submit
+    // validate hospital input fields 
     const errors = {};
     if (!formData.hospitalName.trim()) errors.hospitalName = 'Hospital name is required';
     if (!formData.hospitalCode.trim()) errors.hospitalCode = 'Hospital code is required';
