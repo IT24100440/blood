@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import{ getAllBloodUnits, createBloodUnit, updateBloodUnit, deleteBloodUnit, getAllHospitals } from '../../../services/api';
 import { exportRowsToPdf, includesQuery } from '../../../utils/adminExport';
 
-//managing blood unit
+//managing blood units
 function ManageBloodUnits() {
   const navigate = useNavigate();
   const [units, setUnits] = useState([]);
