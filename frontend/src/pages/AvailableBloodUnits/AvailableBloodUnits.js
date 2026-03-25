@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import { getAllBloodUnits } from '../../services/api';
 import './AvailableBloodUnits.css';
 
+//AvailableBloodUnits
 function AvailableBloodUnits() {
   const [units, setUnits] = useState([]);
   const [filteredUnits, setFilteredUnits] = useState([]);
@@ -28,7 +29,7 @@ function AvailableBloodUnits() {
       setLoading(false);
     }
   };
-
+// Function to filter the list based on the dropdown selection
   const filterUnits = () => {
     if (filterBloodType) {
       setFilteredUnits(units.filter(u => u.bloodType === filterBloodType));
@@ -36,7 +37,7 @@ function AvailableBloodUnits() {
       setFilteredUnits(units);
     }
   };
-
+// Colors for different blood types (UI styling)
   const bloodTypeColors = {
     'O+': '#dc3545',
     'O-': '#c82333',

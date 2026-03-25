@@ -6,6 +6,7 @@ import Footer from '../../../components/Footer/Footer';
 import{ getAllBloodUnits, createBloodUnit, updateBloodUnit, deleteBloodUnit, getAllHospitals } from '../../../services/api';
 import { exportRowsToPdf, includesQuery } from '../../../utils/adminExport';
 
+//managing blood units
 function ManageBloodUnits() {
   const navigate = useNavigate();
   const [units, setUnits] = useState([]);
@@ -18,6 +19,7 @@ function ManageBloodUnits() {
   });
   const [editingId, setEditingId] = useState(null);
 
+  //loading data
   useEffect(() => {
     const adminId = localStorage.getItem('adminId');
     if (!adminId) navigate('/admin-login');
@@ -36,6 +38,7 @@ function ManageBloodUnits() {
     }
   };
 
+  //form actions
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -85,6 +88,8 @@ function ManageBloodUnits() {
     }
   };
 
+  //Deleting, Searching, and PDFs
+  // 1. When the user clicks the "Delete" button
   const handleDelete = async (id) => {
     if (window.confirm('Delete this blood unit?')) {
       try {
@@ -96,12 +101,14 @@ function ManageBloodUnits() {
     }
   };
 
+  // 2. Search logic: Filter the list based on what is typed in the search bar
   const filteredUnits = units.filter((u) => includesQuery([
     u.hospital?.hospitalName,
     u.bloodType,
     u.unitsAvailable,
   ], searchTerm));
-
+  
+// 3. Generate PDF Report
   const handleExportPdf = () => {
     const rows = filteredUnits.map((u) => ([
       u.hospital?.hospitalName || 'N/A',

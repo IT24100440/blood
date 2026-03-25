@@ -24,7 +24,7 @@ public class BloodUnitController {
     @Autowired
     private HospitalService hospitalService;
 
-    // Create Blood Unit
+    // CREATE (Add a new blood unit)
     @PostMapping
     public ResponseEntity<Map<String, Object>> createBloodUnit(@RequestBody Map<String, Object> unitData) {
         try {
@@ -73,7 +73,7 @@ public class BloodUnitController {
         }
     }
 
-    // Get All Blood Units
+    // // Get ALL Blood Units
     @GetMapping
     public ResponseEntity<List<BloodUnit>> getAllBloodUnits() {
         return ResponseEntity.ok(bloodUnitService.getAllBloodUnits());
@@ -90,7 +90,7 @@ public class BloodUnitController {
                 .body(Map.of("message", "Blood unit not found"));
     }
 
-    // Get Blood Units by Hospital
+    // Get Blood Units by Hospitals
     @GetMapping("/hospital/{hospitalId}")
     public ResponseEntity<?> getBloodUnitsByHospital(@PathVariable Long hospitalId) {
         Optional<Hospital> hospital = hospitalService.getHospitalById(hospitalId);
@@ -101,13 +101,13 @@ public class BloodUnitController {
                 .body(Map.of("message", "Hospital not found"));
     }
 
-    // Get Blood Units by Blood Type
+    // Get Blood Units and blood types
     @GetMapping("/blood-type/{bloodType}")
     public ResponseEntity<List<BloodUnit>> getBloodUnitsByBloodType(@PathVariable String bloodType) {
         return ResponseEntity.ok(bloodUnitService.getBloodUnitsByBloodType(bloodType));
     }
 
-    // Update Blood Unit
+    // Update Blood Units
     @PutMapping("/{id}")
     public ResponseEntity<?> updateBloodUnit(@PathVariable Long id, @RequestBody Map<String, Object> unitData) {
         try {
