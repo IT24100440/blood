@@ -73,7 +73,7 @@ public class BloodUnitController {
         }
     }
 
-    // Get All Blood Units
+    // // Get ALL Blood Units
     @GetMapping
     public ResponseEntity<List<BloodUnit>> getAllBloodUnits() {
         return ResponseEntity.ok(bloodUnitService.getAllBloodUnits());
