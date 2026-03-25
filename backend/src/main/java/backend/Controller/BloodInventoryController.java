@@ -15,7 +15,8 @@ import java.util.*;
 @CrossOrigin({"http://localhost:3000", "http://localhost:3001", "http://localhost:3002"})
 @RequestMapping("/api/blood-inventory")
 public class BloodInventoryController {
-    
+
+    //Database and Services Connection
     @Autowired
     private BloodInventoryRepository bloodInventoryRepository;
     
@@ -25,6 +26,7 @@ public class BloodInventoryController {
     @Autowired
     private NotificationSchedulerService notificationSchedulerService;
 
+    //CREATE (Add new blood bag)
     @PostMapping
     public ResponseEntity<?> addBloodUnit(@RequestBody Map<String, Object> inventoryData) {
         try {
