@@ -38,7 +38,7 @@ public class Hospital {
         this.status = status;
         this.createdAt = LocalDateTime.now();
     }
-
+//get set
     public Long getHospitalId() {
         return hospitalId;
     }
