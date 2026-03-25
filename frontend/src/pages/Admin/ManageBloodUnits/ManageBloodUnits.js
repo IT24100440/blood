@@ -101,12 +101,14 @@ function ManageBloodUnits() {
     }
   };
 
+  // 2. Search logic: Filter the list based on what is typed in the search bar
   const filteredUnits = units.filter((u) => includesQuery([
     u.hospital?.hospitalName,
     u.bloodType,
     u.unitsAvailable,
   ], searchTerm));
-
+  
+// 3. Generate PDF Report
   const handleExportPdf = () => {
     const rows = filteredUnits.map((u) => ([
       u.hospital?.hospitalName || 'N/A',
