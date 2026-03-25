@@ -52,7 +52,7 @@ function ManageBloodCamps() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // validate blood camp input fields before submit
+    // validate blood camp input fields 
     if (!formData.title.trim()) {
       alert('Please enter camp title');
       return;
