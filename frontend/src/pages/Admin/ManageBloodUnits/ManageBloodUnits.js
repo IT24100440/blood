@@ -88,6 +88,7 @@ function ManageBloodUnits() {
     }
   };
 
+  //Deleting, Searching, and PDFs
   const handleDelete = async (id) => {
     if (window.confirm('Delete this blood unit?')) {
       try {
