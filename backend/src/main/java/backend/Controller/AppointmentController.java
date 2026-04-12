@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+//REST Controller for handling Appointment-related APIs
 @RestController
 @CrossOrigin({"http://localhost:3000", "http://localhost:3001", "http://localhost:3002"})
 @RequestMapping("/api/appointment")
