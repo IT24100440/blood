@@ -38,6 +38,7 @@ public class AppointmentController {
     @PostMapping
     public ResponseEntity<Map<String, Object>> createAppointment(@RequestBody Map<String, Object> appointmentData) {
         try {
+            // Extract data from request body
             Long donorId = ((Number) appointmentData.get("donorId")).longValue();
             Long hospitalId = ((Number) appointmentData.get("hospitalId")).longValue();
             String timePeriod = (String) appointmentData.get("timePeriod");
@@ -45,14 +46,17 @@ public class AppointmentController {
             String eligibilityStatus = (String) appointmentData.get("eligibilityStatus");
             String appointmentDateStr = (String) appointmentData.get("appointmentDate");
 
+            // Fetch donor and hospital from database
             Optional<Donor> donor = donorService.getDonorById(donorId);
             Optional<Hospital> hospital = hospitalService.getHospitalById(hospitalId);
 
+            // Validate donor and hospital existence
             if (!donor.isPresent() || !hospital.isPresent()) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                         .body(Map.of("message", "Invalid donor or hospital"));
             }
 
+            // Create new Appointment object
             Appointment appointment = new Appointment(
                     donor.get(),
                     hospital.get(),
