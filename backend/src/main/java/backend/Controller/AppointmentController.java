@@ -22,12 +22,15 @@ import java.util.Optional;
 @CrossOrigin({"http://localhost:3000", "http://localhost:3001", "http://localhost:3002"})
 @RequestMapping("/api/appointment")
 public class AppointmentController {
+    // Inject Appointment Service
     @Autowired
     private AppointmentService appointmentService;
 
+    // Inject Donor Service
     @Autowired
     private DonorService donorService;
 
+    // Inject Hospital Service
     @Autowired
     private HospitalService hospitalService;
 
