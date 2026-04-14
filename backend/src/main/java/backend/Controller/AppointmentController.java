@@ -181,6 +181,8 @@ public class AppointmentController {
             }
             
             Appointment appointment = appointmentOpt.get();
+
+            // Set rejection details
             appointment.setStatus("Rejected");
             appointment.setRejectionReason(rejectionReason);
             appointment.setApprovedBy(adminId);
@@ -198,6 +200,7 @@ public class AppointmentController {
     }
 
     // Mark Appointment as Completed
+    //Updates donor eligibility and last donation date
     @PutMapping("/{id}/complete")
     public ResponseEntity<Map<String, Object>> completeAppointment(@PathVariable Long id, @RequestBody Map<String, Object> data) {
         try {
@@ -208,6 +211,7 @@ public class AppointmentController {
             }
             
             Appointment appointment = appointmentOpt.get();
+            // Mark as completed
             appointment.setStatus("Completed");
             
             // Update donor's last donation date
