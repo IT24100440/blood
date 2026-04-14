@@ -63,7 +63,7 @@ function ManageEmergencyRequests() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // validate emergency request input fields before submit
+    // validate emergency request input fields 
     if (!formData.title.trim() || formData.title.trim().length < 3) {
       alert('Title must be at least 3 characters');
       return;
