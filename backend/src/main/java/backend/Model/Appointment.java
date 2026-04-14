@@ -4,25 +4,31 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+//Entity class representing an Appointment in the system
+//This maps to the "appointments" table in the database
 @Entity
 @Table(name = "appointments")
 public class Appointment {
+    // Primary key (Auto-generated ID)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long appointmentId;
-    
+
+    // Many appointments can belong to one donor
     @ManyToOne
     @JoinColumn(name = "donor_id", nullable = false)
     private Donor donor;
-    
+
+    // Many appointments can belong to one hospital
     @ManyToOne
     @JoinColumn(name = "hospital_id", nullable = false)
     private Hospital hospital;
-    
-    private LocalDate appointmentDate;
-    private String timePeriod;
-    private String bookingType;
-    
+
+    private LocalDate appointmentDate;  // Date of the appointment
+    private String timePeriod; // Time slot
+    private String bookingType; // Type of booking
+
+    // Optional: Appointment can be linked to a blood donation camp
     @ManyToOne
     @JoinColumn(name = "camp_id")
     private BloodCamp camp;
