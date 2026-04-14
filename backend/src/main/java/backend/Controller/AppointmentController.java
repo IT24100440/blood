@@ -17,16 +17,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+//REST Controller for handling Appointment-related APIs
 @RestController
 @CrossOrigin({"http://localhost:3000", "http://localhost:3001", "http://localhost:3002"})
 @RequestMapping("/api/appointment")
 public class AppointmentController {
+    // Inject Appointment Service
     @Autowired
     private AppointmentService appointmentService;
 
+    // Inject Donor Service
     @Autowired
     private DonorService donorService;
 
+    // Inject Hospital Service
     @Autowired
     private HospitalService hospitalService;
 
@@ -34,6 +38,7 @@ public class AppointmentController {
     @PostMapping
     public ResponseEntity<Map<String, Object>> createAppointment(@RequestBody Map<String, Object> appointmentData) {
         try {
+            // Extract data from request body
             Long donorId = ((Number) appointmentData.get("donorId")).longValue();
             Long hospitalId = ((Number) appointmentData.get("hospitalId")).longValue();
             String timePeriod = (String) appointmentData.get("timePeriod");
@@ -41,14 +46,17 @@ public class AppointmentController {
             String eligibilityStatus = (String) appointmentData.get("eligibilityStatus");
             String appointmentDateStr = (String) appointmentData.get("appointmentDate");
 
+            // Fetch donor and hospital from database
             Optional<Donor> donor = donorService.getDonorById(donorId);
             Optional<Hospital> hospital = hospitalService.getHospitalById(hospitalId);
 
+            // Validate donor and hospital existence
             if (!donor.isPresent() || !hospital.isPresent()) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                         .body(Map.of("message", "Invalid donor or hospital"));
             }
 
+            // Create new Appointment object
             Appointment appointment = new Appointment(
                     donor.get(),
                     hospital.get(),
@@ -173,6 +181,8 @@ public class AppointmentController {
             }
             
             Appointment appointment = appointmentOpt.get();
+
+            // Set rejection details
             appointment.setStatus("Rejected");
             appointment.setRejectionReason(rejectionReason);
             appointment.setApprovedBy(adminId);
@@ -190,6 +200,7 @@ public class AppointmentController {
     }
 
     // Mark Appointment as Completed
+    //Updates donor eligibility and last donation date
     @PutMapping("/{id}/complete")
     public ResponseEntity<Map<String, Object>> completeAppointment(@PathVariable Long id, @RequestBody Map<String, Object> data) {
         try {
@@ -200,6 +211,7 @@ public class AppointmentController {
             }
             
             Appointment appointment = appointmentOpt.get();
+            // Mark as completed
             appointment.setStatus("Completed");
             
             // Update donor's last donation date
