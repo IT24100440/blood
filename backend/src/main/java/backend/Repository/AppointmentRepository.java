@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDate;
 import java.util.List;
 
+//add repository
 @Repository
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
     List<Appointment> findByDonor(Donor donor);
