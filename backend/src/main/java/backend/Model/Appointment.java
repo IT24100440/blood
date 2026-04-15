@@ -60,6 +60,7 @@ public class Appointment {
         this.createdAt = LocalDateTime.now();
     }
 
+    // Getter and Setter methods
     public Long getAppointmentId() {
         return appointmentId;
     }
