@@ -14,16 +14,19 @@ import java.util.Optional;
 @Service
 public class AppointmentService {
     @Autowired
-    private AppointmentRepository appointmentRepository;
+    private AppointmentRepository appointmentRepository; // Injecting AppointmentRepository dependency
 
+    // Create and save a new appointment
     public Appointment createAppointment(Appointment appointment) {
         return appointmentRepository.save(appointment);
     }
 
+    // Get a single appointment by its ID
     public Optional<Appointment> getAppointmentById(Long id) {
         return appointmentRepository.findById(id);
     }
 
+    // Get all appointments from the database
     public List<Appointment> getAllAppointments() {
         return appointmentRepository.findAll();
     }
