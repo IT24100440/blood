@@ -31,22 +31,27 @@ public class AppointmentService {
         return appointmentRepository.findAll();
     }
 
+    // Get all appointments for a specific donor
     public List<Appointment> getAppointmentsByDonor(Donor donor) {
         return appointmentRepository.findByDonor(donor);
     }
 
+    // Get all appointments for a specific hospital
     public List<Appointment> getAppointmentsByHospital(Hospital hospital) {
         return appointmentRepository.findByHospital(hospital);
     }
 
+    // Get all appointments for a specific date
     public List<Appointment> getAppointmentsByDate(LocalDate date) {
         return appointmentRepository.findByAppointmentDate(date);
     }
 
+    // Get all appointments by status (e.g., Pending, Completed, Approved)
     public List<Appointment> getAppointmentsByStatus(String status) {
         return appointmentRepository.findByStatus(status);
     }
 
+    // Get all pending appointments for a specific donor
     public List<Appointment> getPendingAppointmentsByDonor(Donor donor) {
         return appointmentRepository.findByDonorAndStatus(donor, "Pending");
     }
