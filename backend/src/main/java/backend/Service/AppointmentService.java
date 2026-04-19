@@ -56,6 +56,7 @@ public class AppointmentService {
         return appointmentRepository.findByDonorAndStatus(donor, "Pending");
     }
 
+    // Mark all pending appointments of a donor as "Completed"
     public void completePendingAppointmentsForDonor(Donor donor) {
         // Find all pending appointments for this donor
         List<Appointment> pendingAppointments = getPendingAppointmentsByDonor(donor);
@@ -67,10 +68,14 @@ public class AppointmentService {
         }
     }
 
+    // Update an existing appointment by ID
     public Appointment updateAppointment(Long id, Appointment appointment) {
         Optional<Appointment> existingAppointment = appointmentRepository.findById(id);
+        // Check if appointment exists in database
         if (existingAppointment.isPresent()) {
             Appointment appointmentToUpdate = existingAppointment.get();
+
+            // Update fields with new values
             appointmentToUpdate.setAppointmentDate(appointment.getAppointmentDate());
             appointmentToUpdate.setTimePeriod(appointment.getTimePeriod());
             appointmentToUpdate.setBookingType(appointment.getBookingType());
@@ -85,6 +90,7 @@ public class AppointmentService {
         return null;
     }
 
+    // Delete an appointment by ID
     public void deleteAppointment(Long id) {
         appointmentRepository.deleteById(id);
     }
