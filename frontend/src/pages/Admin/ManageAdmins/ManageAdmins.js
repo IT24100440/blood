@@ -70,6 +70,7 @@ function ManageAdmins() {
     }
 
     try {
+      // Create admin using API
       await createAdmin(formData);
       alert('Admin created successfully!');
       setFormData({ fullName: '', email: '', password: '', role: 'Admin' });
