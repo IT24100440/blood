@@ -57,6 +57,7 @@ function ManageAdmins() {
       return;
     }
 
+    // Validate password
     if (!formData.password || formData.password.length < 6) {
       alert('Password must be at least 6 characters');
       return;
