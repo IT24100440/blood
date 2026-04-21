@@ -24,6 +24,7 @@ function ManageAdmins() {
     else fetchAdmins();
   }, [navigate]);
 
+  // Fetch all admins from backend
   const fetchAdmins = async () => {
     try {
       const res = await getAllAdmins();
