@@ -50,6 +50,7 @@ function ManageAdmins() {
       return;
     }
 
+    // Validate email
     const emailError = validators.email(formData.email);
     if (emailError) {
       alert(emailError);
