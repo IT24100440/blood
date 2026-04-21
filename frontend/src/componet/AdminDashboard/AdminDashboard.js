@@ -651,7 +651,7 @@ function AdminDashboard() {
     </div>
   );
 
-  // Render Appointments
+  // Render Appointment
   const renderAppointments = () => (
     <div className="section-content">
       <h2>Upcoming Appointments</h2>
