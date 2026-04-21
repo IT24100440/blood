@@ -1,3 +1,4 @@
+// Import React hooks
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../../components/Header/Header';
@@ -149,6 +150,8 @@ function ManageAdmins() {
                   </tr>
                 </thead>
                 <tbody>
+
+            {/* Display filtered admins */}
                   {filteredAdmins.map(a => (
                     <tr key={a.adminId}>
                       <td>{a.fullName}</td>
@@ -156,6 +159,8 @@ function ManageAdmins() {
                       <td>{a.role}</td>
                       <td>{new Date(a.createdAt).toLocaleDateString()}</td>
                       <td>
+
+                    {/* Delete button */}
                         <button className="btn-small btn-delete" onClick={() => handleDelete(a.adminId)}>Delete</button>
                       </td>
                     </tr>
@@ -171,4 +176,5 @@ function ManageAdmins() {
   );
 }
 
+// Export component
 export default ManageAdmins;
