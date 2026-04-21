@@ -83,6 +83,8 @@ function ManageAdmins() {
 
   // Handle delete admin
   const handleDelete = async (id) => {
+    
+    // Confirm before delete
     if (window.confirm('Delete this admin?')) {
       try {
         await deleteAdmin(id);
