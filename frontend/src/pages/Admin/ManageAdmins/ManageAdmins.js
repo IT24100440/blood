@@ -95,12 +95,14 @@ function ManageAdmins() {
     }
   };
 
+  // Filter admins based on search term
   const filteredAdmins = admins.filter((a) => includesQuery([
     a.fullName,
     a.email,
     a.role,
   ], searchTerm));
 
+  // Generate PDF report
   const handleExportPdf = () => {
     const rows = filteredAdmins.map((a) => ([
       a.fullName,
