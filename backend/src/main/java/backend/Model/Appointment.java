@@ -48,6 +48,7 @@ public class Appointment {
     public Appointment() {
     }
 
+   //Parameterized constructor for creating a new appointment
     public Appointment(Donor donor, Hospital hospital, LocalDate appointmentDate, 
                        String timePeriod, String bookingType, String eligibilityStatus) {
         this.donor = donor;
@@ -59,6 +60,7 @@ public class Appointment {
         this.createdAt = LocalDateTime.now();
     }
 
+    // Getter and Setter methods
     public Long getAppointmentId() {
         return appointmentId;
     }
