@@ -63,6 +63,7 @@ function ManageAdmins() {
       return;
     }
 
+    // Validate role
     if (!formData.role) {
       alert('Please select a role');
       return;
