@@ -81,6 +81,7 @@ function ManageAdmins() {
     }
   };
 
+  // Handle delete admin
   const handleDelete = async (id) => {
     if (window.confirm('Delete this admin?')) {
       try {
