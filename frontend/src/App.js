@@ -25,7 +25,7 @@ import ViewDonorRecords from './pages/Admin/ViewDonorRecords/ViewDonorRecords';
 import ManageAdmins from './pages/Admin/ManageAdmins/ManageAdmins';
 import ManageAppointmentRequests from './pages/Admin/ManageAppointmentRequests/ManageAppointmentRequests';
 
-// Components
+// Components.
 import Chatbot from './components/Chatbot/Chatbot';
 
 import './App.css';
