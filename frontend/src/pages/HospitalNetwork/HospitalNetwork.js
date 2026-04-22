@@ -10,6 +10,7 @@ function HospitalNetwork() {
   const [loading, setLoading] = useState(true);
   const [filterCity, setFilterCity] = useState('');
 
+
   useEffect(() => {
     fetchHospitals();
   }, []);
