@@ -4,6 +4,11 @@ import Footer from '../../components/Footer/Footer';
 import { getAllHospitals } from '../../services/api';
 import './HospitalNetwork.css';
 
+function HospitalNetwork() {
+  const [hospitals, setHospitals] = useState([]);
+  const [filteredHospitals, setFilteredHospitals] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filterCity, setFilterCity] = useState('');
 
 
   useEffect(() => {
