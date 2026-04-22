@@ -66,12 +66,16 @@ public class AppointmentController {
                     eligibilityStatus
             );
 
+            // Save appointment
             Appointment createdAppointment = appointmentService.createAppointment(appointment);
+
+            // Prepare response
             Map<String, Object> response = new HashMap<>();
             response.put("message", "Appointment booked successfully");
             response.put("appointment", createdAppointment);
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
         } catch (Exception e) {
+            // Handle errors
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(Map.of("message", "Error creating appointment: " + e.getMessage()));
         }
@@ -146,8 +150,10 @@ public class AppointmentController {
             }
             
             Appointment appointment = appointmentOpt.get();
+            // Update appointment status
             appointment.setStatus("Approved");
             appointment.setApprovedBy(adminId);
+            // Set approval time
             java.time.LocalDateTime approvalDateTime = java.time.LocalDateTime.now();
             appointment.setApprovedAt(approvalDateTime);
             
