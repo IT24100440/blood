@@ -27,7 +27,7 @@ function ManageBloodUnits() {
     if (!adminId) navigate('/admin-login');
     else fetchData();
   }, [navigate]);
-
+  // Fetch blood units and hospitals
   const fetchData = async () => {
     try {
       const [unitRes, hosRes] = await Promise.all([getAllBloodUnits(), getAllHospitals()]);
