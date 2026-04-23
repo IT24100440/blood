@@ -177,8 +177,9 @@ function ManageBloodUnits() {
                       <td>{u.unitsAvailable}</td>
                       <td>{new Date(u.updatedAt).toLocaleDateString()}</td>
                       <td>
-                      {/* Delete button */}
+                      {/* Edit button */}
                         <button className="btn-small btn-edit" onClick={() => { setFormData(u); setEditingId(u.unitId); setShowForm(true); }}>Edit</button>
+                      {/* Delete button */}
                         <button className="btn-small btn-delete" onClick={() => handleDelete(u.unitId)}>Delete</button>
                       </td>
                     </tr>
