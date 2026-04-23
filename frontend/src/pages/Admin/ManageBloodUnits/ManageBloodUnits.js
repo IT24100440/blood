@@ -60,7 +60,7 @@ function ManageBloodUnits() {
       alert('Please select a valid blood type');
       return;
     }
-
+    // Validate units
     const unitCount = Number(formData.unitsAvailable);
     if (!Number.isInteger(unitCount) || unitCount < 1) {
       alert('Units available must be a whole number greater than 0');
