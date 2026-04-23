@@ -54,7 +54,7 @@ function ManageBloodUnits() {
       alert('Please select a hospital');
       return;
     }
-
+   // Validate blood type
     const validBloodTypes = ['O+', 'O-', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-'];
     if (!validBloodTypes.includes(formData.bloodType)) {
       alert('Please select a valid blood type');
