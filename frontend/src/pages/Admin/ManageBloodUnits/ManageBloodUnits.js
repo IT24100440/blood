@@ -160,7 +160,7 @@ function ManageBloodUnits() {
               </form>
             </div>
           )}
-
+          {/* Loading or table */}
           {loading ? <p className="loading">Loading...</p> : (
             <div className="table-container">
               <table className="admin-table">
