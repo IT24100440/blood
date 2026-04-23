@@ -192,5 +192,5 @@ function ManageBloodUnits() {
     </div>
   );
 }
-
+// Export component
 export default ManageBloodUnits;
