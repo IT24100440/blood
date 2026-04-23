@@ -74,7 +74,7 @@ function ManageBloodUnits() {
         hospitalId: parseInt(formData.hospitalId),
         unitsAvailable: parseInt(formData.unitsAvailable)
       };
-
+      // Update or create
       if (editingId) {
         await updateBloodUnit(editingId, dataToSend);
       } else {
