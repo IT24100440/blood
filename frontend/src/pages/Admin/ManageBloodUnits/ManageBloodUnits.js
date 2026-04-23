@@ -92,6 +92,7 @@ function ManageBloodUnits() {
 
   //Deleting, Searching, and PDFs
   // 1. When the user clicks the "Delete" button
+  // Delete blood unit
   const handleDelete = async (id) => {
     if (window.confirm('Delete this blood unit?')) {
       try {
