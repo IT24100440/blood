@@ -48,23 +48,6 @@ function Login() {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-
-          <button type="submit" className="login-btn">Login</button>
-        </form>
-      </div>
-    </div>
   );
 }
 
