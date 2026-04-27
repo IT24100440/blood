@@ -65,7 +65,13 @@ const DonorNotifications = () => {
     }
 
     return (
-      
+        <div className="notifications-container">
+            <div className="notifications-header">
+                <h2>🚨 Emergency Blood Alerts</h2>
+                <div className="notification-count">
+                    {notifications.length > 0 && (
+                        <span className="badge">{notifications.length} alerts</span>
+                    )}
                 </div>
             </div>
 
