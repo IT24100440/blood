@@ -42,14 +42,7 @@ function AdminDashboard() {
     location: ''
   });
 
-  const [emergencyRequest, setEmergencyRequest] = useState({
-    hospitalId: '',
-    bloodGroup: 'A_POSITIVE',
-    quantity: '',
-    patientName: '',
-    reason: '',
-    location: ''
-  });
+ 
 
   const [newCamp, setNewCamp] = useState({
     campName: '',
