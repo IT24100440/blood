@@ -14,7 +14,11 @@ function HospitalDashboard() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [loading, setLoading] = useState(false);
   
- 
+  const [hospitalProfile, setHospitalProfile] = useState(null);
+  const [bloodRequests, setBloodRequests] = useState([]);
+  const [hospitalAppointments, setHospitalAppointments] = useState([]);
+  const [notifications, setNotifications] = useState([]);
+  const [bloodStock, setBloodStock] = useState({});
   
   const [showProfileForm, setShowProfileForm] = useState(false);
   const [profileForm, setProfileForm] = useState({
