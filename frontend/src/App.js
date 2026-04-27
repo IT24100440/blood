@@ -13,17 +13,6 @@ import BookAppointment from './pages/BookAppointment/BookAppointment';
 import AdminLogin from './pages/AdminLogin/AdminLogin';
 
 // Admin Pages
-import AdminDashboard from './pages/Admin/AdminDashboard/AdminDashboard';
-import ManageHospitals from './pages/Admin/ManageHospitals/ManageHospitals';
-import HospitalDashboard from './pages/Admin/HospitalDashboard/HospitalDashboard';
-import ManageBloodCamps from './pages/Admin/ManageBloodCamps/ManageBloodCamps';
-import ManageCampBookings from './pages/Admin/ManageCampBookings/ManageCampBookings';
-import ManageEmergencyRequests from './pages/Admin/ManageEmergencyRequests/ManageEmergencyRequests';
-import ManageBloodUnits from './pages/Admin/ManageBloodUnits/ManageBloodUnits';
-import ViewAppointments from './pages/Admin/ViewAppointments/ViewAppointments';
-import ViewDonorRecords from './pages/Admin/ViewDonorRecords/ViewDonorRecords';
-import ManageAdmins from './pages/Admin/ManageAdmins/ManageAdmins';
-import ManageAppointmentRequests from './pages/Admin/ManageAppointmentRequests/ManageAppointmentRequests';
 
 // Components.
 import Chatbot from './components/Chatbot/Chatbot';
