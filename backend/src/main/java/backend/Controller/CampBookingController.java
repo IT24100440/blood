@@ -143,31 +143,7 @@ public class CampBookingController {
         return ResponseEntity.ok(response);
     }
 
-    // Update booking status (Mark attended, cancelled, etc)
-    @PutMapping("/{id}")
-    public ResponseEntity<Map<String, Object>> updateCampBooking(@PathVariable Long id, @RequestBody Map<String, Object> updateData) {
-        try {
-            Optional<CampBooking> existing = campBookingService.getCampBookingById(id);
-            if (!existing.isPresent()) {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                        .body(Map.of("message", "Booking not found"));
-            }
-            
-            CampBooking booking = existing.get();
-            booking.setStatus((String) updateData.get("status"));
-            
-            CampBooking updated = campBookingService.updateCampBooking(id, booking);
-            
-            Map<String, Object> response = new HashMap<>();
-            response.put("message", "Booking updated successfully");
-            response.put("booking", updated);
-            
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body(Map.of("message", "Error updating booking: " + e.getMessage()));
-        }
-    }
+
 
     // Cancel booking
     @DeleteMapping("/{id}")
