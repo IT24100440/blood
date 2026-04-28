@@ -411,6 +411,156 @@ function Chatbot() {
       return "You can reach us at phone number 0743179688 for any inquiries. Our team is ready to help you!";
     }
 
+    // 51 Blood pressure
+if (message.match(/\b(blood pressure|bp)\b/)) {
+  return "Your blood pressure is checked before donation to ensure it is within a safe range.";
+}
+
+// 52 Pulse rate
+if (message.match(/\b(pulse|heart rate)\b/)) {
+  return "Your pulse rate is measured before donating to make sure your heart is healthy.";
+}
+
+// 53 Temperature
+if (message.match(/\b(temperature|body temperature)\b/)) {
+  return "Your body temperature is checked to confirm you are not having a fever.";
+}
+
+// 54 Anemia
+if (message.match(/\b(anemia|low iron)\b/)) {
+  return "If you have anemia or low iron levels, you may not be eligible to donate until recovered.";
+}
+
+// 55 Recovery time
+if (message.match(/\b(recovery|recover|how long to recover)\b/)) {
+  return "Most people feel normal within a few hours, but full recovery of blood volume takes about 24 hours.";
+}
+
+// 56 Eat after donation
+if (message.match(/\b(eat after|food after donation)\b/)) {
+  return "Eat a healthy meal after donating and include iron-rich foods like spinach or meat.";
+}
+
+// 57 Dizziness
+if (message.match(/\b(dizzy|dizziness|faint)\b/)) {
+  return "Some donors may feel lightheaded. Sit or lie down and drink fluids until you feel better.";
+}
+
+// 58 Driving
+if (message.match(/\b(drive|driving after donation)\b/)) {
+  return "You can usually drive after donating, but rest if you feel dizzy or weak.";
+}
+
+// 59 Work
+if (message.match(/\b(work|go to work)\b/)) {
+  return "You can return to normal work, but avoid heavy lifting for the rest of the day.";
+}
+
+// 60 Sports
+if (message.match(/\b(sports|play sports)\b/)) {
+  return "Avoid intense sports or workouts for at least 24 hours after donating.";
+}
+
+// 61 Blood separation
+if (message.match(/\b(separate|components)\b/)) {
+  return "Donated blood is separated into red cells, plasma, and platelets for different medical uses.";
+}
+
+// 62 Rare blood
+if (message.match(/\b(rare blood|rare type)\b/)) {
+  return "Rare blood types are especially valuable and in high demand for specific patients.";
+}
+
+// 63 Donation interval
+if (message.match(/\b(interval|gap between donations)\b/)) {
+  return "There must be at least a 3-month gap between whole blood donations.";
+}
+
+// 64 Infection risk
+if (message.match(/\b(risk of infection)\b/)) {
+  return "There is no risk of infection when donating because sterile equipment is used every time.";
+}
+
+// 65 Consent
+if (message.match(/\b(consent|permission)\b/)) {
+  return "You must give consent before donating blood, confirming you understand the process.";
+}
+
+// 66 Health check
+if (message.match(/\b(health check|checkup)\b/)) {
+  return "A mini health check is done before donation, including hemoglobin, BP, and pulse.";
+}
+
+// 67 Chronic disease
+if (message.match(/\b(chronic disease)\b/)) {
+  return "Some chronic conditions may affect eligibility. Always consult medical staff.";
+}
+
+// 68 Cancer history
+if (message.match(/\b(cancer history|cancer patient)\b/)) {
+  return "People with a history of certain cancers may not be eligible to donate.";
+}
+
+// 69 Surgery
+if (message.match(/\b(surgery|operation)\b/)) {
+  return "You may need to wait a few months after surgery before donating blood.";
+}
+
+// 70 Vaccination
+if (message.match(/\b(vaccine|vaccination)\b/)) {
+  return "After some vaccinations, you may need to wait before donating. Check with staff.";
+}
+
+// 71 COVID
+if (message.match(/\b(covid|coronavirus)\b/)) {
+  return "If you've had COVID-19, you can donate after full recovery and a waiting period.";
+}
+
+// 72 Bleeding
+if (message.match(/\b(bleeding after donation)\b/)) {
+  return "Apply pressure to the site and keep the bandage on for a few hours to prevent bleeding.";
+}
+
+// 73 Bruising
+if (message.match(/\b(bruising|bruise)\b/)) {
+  return "Minor bruising can happen but usually fades within a few days.";
+}
+
+// 74 Hydration importance
+if (message.match(/\b(why hydrate|importance of water)\b/)) {
+  return "Staying hydrated helps maintain blood volume and prevents dizziness.";
+}
+
+// 75 Iron food
+if (message.match(/\b(iron food|foods with iron)\b/)) {
+  return "Eat foods like spinach, beans, red meat, and eggs to maintain iron levels.";
+}
+
+// 76 Blood usage
+if (message.match(/\b(used for|who needs blood)\b/)) {
+  return "Blood is used for surgeries, trauma care, cancer treatment, and childbirth complications.";
+}
+
+// 77 Donor card
+if (message.match(/\b(donor card)\b/)) {
+  return "After donating, you may receive a donor card to track your contributions.";
+}
+
+// 78 Mobile camps
+if (message.match(/\b(mobile camp|mobile donation)\b/)) {
+  return "Mobile donation units travel to communities to make donation more accessible.";
+}
+
+// 79 Emergency call
+if (message.match(/\b(call for donors|urgent donors)\b/)) {
+  return "Sometimes urgent appeals are made when specific blood types are critically low.";
+}
+
+// 80 Volunteer
+if (message.match(/\b(volunteer|help donation)\b/)) {
+  return "You can also support blood donation programs by volunteering at events.";
+}
+
     
     
     // Default response with suggestions
