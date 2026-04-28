@@ -49,22 +49,22 @@ public class BloodInventoryController {
                 .body(Map.of("message", "Error adding blood unit: " + e.getMessage()));
         }
     }
-    
+    // Get all blood inventory
     @GetMapping
     public ResponseEntity<List<BloodInventory>> getAllInventory() {
         return ResponseEntity.ok(bloodInventoryRepository.findAll());
     }
-    
+    // Get only available (not expired) blood
     @GetMapping("/available")
     public ResponseEntity<List<BloodInventory>> getAvailableInventory() {
         return ResponseEntity.ok(bloodInventoryRepository.findByIsExpired(false));
     }
-    
+    // Get expired blood
     @GetMapping("/expired")
     public ResponseEntity<List<BloodInventory>> getExpiredInventory() {
         return ResponseEntity.ok(bloodInventoryRepository.findByIsExpired(true));
     }
-    
+    // Get blood by blood group (A+, B+, etc.)
     @GetMapping("/blood-group/{bloodGroup}")
     public ResponseEntity<List<BloodInventory>> getInventoryByBloodGroup(@PathVariable String bloodGroup) {
         BloodGroup bg = BloodGroup.valueOf(bloodGroup);
