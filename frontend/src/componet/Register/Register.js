@@ -22,10 +22,7 @@ function Register() {
       alert("Registered Successfully");
       
       // Clear form
-      setUser({
-        name: "",
-        email: "",
-        password: "",
+     
       });
       
       // Redirect
