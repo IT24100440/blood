@@ -77,43 +77,43 @@ public class BloodInventory {
         // Update last modified time
         this.updatedAt = LocalDateTime.now();
     }
-
+// Get collection date
     public LocalDate getCollectionDate() {
         return collectionDate;
     }
-
+// Set collection date
     public void setCollectionDate(LocalDate collectionDate) {
         this.collectionDate = collectionDate;
     }
-
+// Get expiry date
     public LocalDate getExpiryDate() {
         return expiryDate;
     }
-
+// Set expiry date
     public void setExpiryDate(LocalDate expiryDate) {
         this.expiryDate = expiryDate;
     }
-
+// Check if expired
     public boolean isExpired() {
         return isExpired;
     }
-
+// Set expired status
     public void setExpired(boolean expired) {
         isExpired = expired;
     }
-
+// Get created time
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
-
+// Set created time
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
-
+// Get updated time
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
-
+// Set updated time
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
