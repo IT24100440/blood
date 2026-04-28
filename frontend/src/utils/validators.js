@@ -52,20 +52,7 @@ export const validators = {
     return '';
   },
 
-  // Number validation
-  number: (value, fieldName) => {
-    if (value === '' || value === null || value === undefined) return `${fieldName} is required`;
-    const num = Number(value);
-    if (isNaN(num)) return `${fieldName} must be a valid number`;
-    return '';
-  },
 
-  positiveNumber: (value, fieldName) => {
-    const error = validators.number(value, fieldName);
-    if (error) return error;
-    if (Number(value) <= 0) return `${fieldName} must be greater than 0`;
-    return '';
-  },
 
   // NIC validation (Sri Lanka format)
   nic: (value) => {
