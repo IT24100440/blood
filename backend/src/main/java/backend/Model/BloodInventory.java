@@ -55,25 +55,26 @@ public class BloodInventory {
     public Long getId() {
         return id;
     }
-
+   // Set ID
     public void setId(Long id) {
         this.id = id;
     }
-
+   // Get blood group
     public BloodGroup getBloodGroup() {
         return bloodGroup;
     }
-
+  // Set blood group
     public void setBloodGroup(BloodGroup bloodGroup) {
         this.bloodGroup = bloodGroup;
     }
-
+  // Get quantity
     public int getQuantity() {
         return quantity;
     }
-
+// Set quantity and update timestamp
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+        // Update last modified time
         this.updatedAt = LocalDateTime.now();
     }
 
