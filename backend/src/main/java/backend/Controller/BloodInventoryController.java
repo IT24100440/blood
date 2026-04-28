@@ -1,5 +1,6 @@
 package backend.Controller;
 
+// Import models, repositories, and services
 import backend.Model.*;
 import backend.Repository.*;
 import backend.Service.NotificationSchedulerService;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.*;
-
+// This class is a REST Controller (handles HTTP requests)
 @RestController
 @CrossOrigin({"http://localhost:3000", "http://localhost:3001", "http://localhost:3002"})
 @RequestMapping("/api/blood-inventory")
