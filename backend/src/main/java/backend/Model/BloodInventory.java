@@ -1,35 +1,37 @@
 package backend.Model;
-
+// Import JPA annotations
 import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
+// Table name in database
 @Table(name = "blood_inventory")
 public class BloodInventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+    // Blood group column (A+, B-, etc.)
     @Column(name = "blood_group", nullable = false)
+    // Store enum as String in database
     @Enumerated(EnumType.STRING)
     private BloodGroup bloodGroup;
     
     @Column(nullable = false)
     private int quantity; // in units
-    
+    // Date when blood was collected
     @Column(name = "collection_date", nullable = false)
     private LocalDate collectionDate;
-    
+    // Expiry date of blood
     @Column(name = "expiry_date", nullable = false)
     private LocalDate expiryDate;
-    
+    // Check if blood is expired or not
     @Column(name = "is_expired")
     private boolean isExpired = false;
-    
+    // Record creation timestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;
-    
+    // Last updated timestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
