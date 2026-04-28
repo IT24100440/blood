@@ -411,6 +411,256 @@ function Chatbot() {
       return "You can reach us at phone number 0743179688 for any inquiries. Our team is ready to help you!";
     }
 
+    // 1 Eligibility
+if (message.match(/\b(eligibility|can i donate|who can donate|requirements)\b/)) {
+  return "Most healthy adults aged 18-65 can donate blood. You should weigh at least 50kg and be in good health. Some medical conditions or recent travel may affect eligibility.";
+}
+
+// 2 Age limit
+if (message.match(/\b(age limit|minimum age|maximum age)\b/)) {
+  return "The typical age range for blood donation is 18 to 65 years. Some countries allow older donors with medical approval.";
+}
+
+// 3 Weight requirement
+if (message.match(/\b(weight|minimum weight)\b/)) {
+  return "You usually need to weigh at least 50kg (110 lbs) to donate blood safely.";
+}
+
+// 4 Donation time
+if (message.match(/\b(how long|duration|time to donate)\b/)) {
+  return "The entire blood donation process takes about 30 to 45 minutes, while the actual donation takes only 8-10 minutes.";
+}
+
+// 5 Pain
+if (message.match(/\b(pain|hurt|is it painful)\b/)) {
+  return "You may feel a slight pinch when the needle is inserted, but most donors say it's very manageable.";
+}
+
+// 6 Safety
+if (message.match(/\b(safe|is it safe|risk)\b/)) {
+  return "Blood donation is very safe. Sterile, single-use equipment is used, so there is no risk of infection.";
+}
+
+// 7 Frequency
+if (message.match(/\b(how often|frequency|how many times)\b/)) {
+  return "You can donate whole blood every 3 months (about 12 weeks).";
+}
+
+// 8 Before donation
+if (message.match(/\b(before donation|prepare|what to do before)\b/)) {
+  return "Eat a healthy meal, drink plenty of water, and get good sleep before donating blood.";
+}
+
+// 9 After donation
+if (message.match(/\b(after donation|post donation|what to do after)\b/)) {
+  return "Rest for a few minutes, drink fluids, and avoid heavy activities for the rest of the day.";
+}
+
+// 10 Blood types
+if (message.match(/\b(blood types|types of blood)\b/)) {
+  return "The main blood types are A, B, AB, and O, each with positive or negative Rh factors.";
+}
+
+// 11 Universal donor
+if (message.match(/\b(universal donor)\b/)) {
+  return "O negative blood is known as the universal donor because it can be given to almost anyone.";
+}
+
+// 12 Universal recipient
+if (message.match(/\b(universal recipient)\b/)) {
+  return "AB positive individuals are universal recipients and can receive blood from any type.";
+}
+
+// 13 Hemoglobin
+if (message.match(/\b(hemoglobin|hb level)\b/)) {
+  return "Your hemoglobin level is checked before donation to ensure it is safe for you to donate.";
+}
+
+// 14 Fasting
+if (message.match(/\b(fasting|empty stomach)\b/)) {
+  return "You should NOT donate on an empty stomach. Eat a healthy meal before donating.";
+}
+
+// 15 Alcohol
+if (message.match(/\b(alcohol|drink alcohol)\b/)) {
+  return "Avoid alcohol before and after donation, as it can dehydrate you.";
+}
+
+// 16 Smoking
+if (message.match(/\b(smoking|smoke)\b/)) {
+  return "Smoking is allowed, but avoid smoking immediately before and after donating blood.";
+}
+
+// 17 Illness
+if (message.match(/\b(sick|ill|fever|cold)\b/)) {
+  return "If you are feeling unwell, it's best to wait until you fully recover before donating.";
+}
+
+// 18 Medication
+if (message.match(/\b(medication|medicine|drugs)\b/)) {
+  return "Some medications may affect eligibility. Always inform staff about any medicines you're taking.";
+}
+
+// 19 Pregnancy
+if (message.match(/\b(pregnant|pregnancy)\b/)) {
+  return "Pregnant women should not donate blood. You can donate after recovery and medical approval.";
+}
+
+// 20 Travel
+if (message.match(/\b(travel|abroad|recent travel)\b/)) {
+  return "Recent travel to certain countries may temporarily affect your eligibility due to infection risks.";
+}
+
+// 21 Tattoo
+if (message.match(/\b(tattoo|piercing)\b/)) {
+  return "You may need to wait 3-6 months after getting a tattoo or piercing before donating.";
+}
+
+// 22 Diabetes
+if (message.match(/\b(diabetes)\b/)) {
+  return "People with controlled diabetes can donate blood if they meet other eligibility criteria.";
+}
+
+// 23 Blood storage
+if (message.match(/\b(storage|how blood stored)\b/)) {
+  return "Donated blood is stored in controlled conditions and separated into components like plasma and platelets.";
+}
+
+// 24 Platelets
+if (message.match(/\b(platelets)\b/)) {
+  return "Platelets help blood clot and are often needed for cancer patients and surgeries.";
+}
+
+// 25 Plasma
+if (message.match(/\b(plasma)\b/)) {
+  return "Plasma is the liquid part of blood and is used to treat burns, shock, and clotting disorders.";
+}
+
+// 26 Red cells
+if (message.match(/\b(red blood cells|rbc)\b/)) {
+  return "Red blood cells carry oxygen and are essential for patients with anemia or blood loss.";
+}
+
+// 27 Blood shortage
+if (message.match(/\b(shortage|lack of blood)\b/)) {
+  return "Blood shortages happen often. Regular donations help maintain a stable supply for emergencies.";
+}
+
+// 28 Emergency
+if (message.match(/\b(emergency|urgent need)\b/)) {
+  return "Blood is critical during emergencies like accidents, surgeries, and natural disasters.";
+}
+
+// 29 Donation cost
+if (message.match(/\b(cost|free|payment)\b/)) {
+  return "Blood donation is completely free and voluntary. You are helping save lives!";
+}
+
+// 30 Benefits
+if (message.match(/\b(health benefits|benefits)\b/)) {
+  return "Donating blood can improve heart health, reduce iron overload, and give you a free health check.";
+}
+
+// 31 Fear
+if (message.match(/\b(fear|scared|afraid)\b/)) {
+  return "It's normal to feel nervous, but trained staff ensure a safe and comfortable experience.";
+}
+
+// 32 First time
+if (message.match(/\b(first time|new donor)\b/)) {
+  return "First-time donors are guided through every step. The process is simple and safe.";
+}
+
+// 33 ID requirement
+if (message.match(/\b(id|identification)\b/)) {
+  return "You may need a valid ID when registering for blood donation.";
+}
+
+// 34 Blood testing
+if (message.match(/\b(testing|screening)\b/)) {
+  return "All donated blood is carefully tested for infections before being used.";
+}
+
+// 35 Waiting time
+if (message.match(/\b(wait|waiting time)\b/)) {
+  return "Appointments reduce waiting time, but walk-ins are usually welcome.";
+}
+
+// 36 Donation camp
+if (message.match(/\b(camp|blood camp|drive)\b/)) {
+  return "Blood donation camps are organized regularly in schools, offices, and communities.";
+}
+
+// 37 Cancel appointment
+if (message.match(/\b(cancel|reschedule)\b/)) {
+  return "You can cancel or reschedule your appointment anytime through your dashboard.";
+}
+
+// 38 Location
+if (message.match(/\b(location|where)\b/)) {
+  return "You can find nearby donation centers using the Donor Dashboard or location services.";
+}
+
+// 39 Reminder
+if (message.match(/\b(reminder|notify)\b/)) {
+  return "You will receive reminders before your scheduled donation appointment.";
+}
+
+// 40 Dashboard
+if (message.match(/\b(dashboard|account)\b/)) {
+  return "The Donor Dashboard helps you track donations, appointments, and health updates.";
+}
+
+// 41 History
+if (message.match(/\b(history|records)\b/)) {
+  return "You can view your donation history in your profile dashboard.";
+}
+
+// 42 Contact
+if (message.match(/\b(contact|support|help)\b/)) {
+  return "You can contact support through the help section for any assistance.";
+}
+
+// 43 Feedback
+if (message.match(/\b(feedback|review)\b/)) {
+  return "We appreciate your feedback to improve our services.";
+}
+
+// 44 Thank donor
+if (message.match(/\b(thank|appreciate)\b/)) {
+  return "Thank you for your willingness to donate blood and save lives!";
+}
+
+// 45 Iron levels
+if (message.match(/\b(iron)\b/)) {
+  return "Maintaining good iron levels is important. Eat iron-rich foods before and after donation.";
+}
+
+// 46 Exercise
+if (message.match(/\b(exercise|gym)\b/)) {
+  return "Avoid heavy exercise immediately after donating blood.";
+}
+
+// 47 Hydration
+if (message.match(/\b(water|hydrate|hydration)\b/)) {
+  return "Drink plenty of water before and after donation to stay hydrated.";
+}
+
+// 48 Sleep
+if (message.match(/\b(sleep|rest)\b/)) {
+  return "Get at least 6-8 hours of sleep before donating blood.";
+}
+
+// 49 Infection
+if (message.match(/\b(infection|disease)\b/)) {
+  return "People with certain infections may need to wait before donating blood.";
+}
+
+// 50 Motivation
+if (message.match(/\b(motivation|inspire)\b/)) {
+  return "Every blood donation is a chance to save lives and make a meaningful impact.";
+}
+
     
     
     // Default response with suggestions
