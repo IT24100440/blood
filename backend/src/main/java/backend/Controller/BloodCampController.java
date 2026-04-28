@@ -89,27 +89,7 @@ public class BloodCampController {
         return ResponseEntity.ok(bloodCampService.getAllBloodCamps());
     }
 
-    // Get Blood Camp by ID
-    @GetMapping("/{id}")
-    public ResponseEntity<?> getBloodCampById(@PathVariable Long id) {
-        Optional<BloodCamp> camp = bloodCampService.getBloodCampById(id);
-        if (camp.isPresent()) {
-            return ResponseEntity.ok(camp.get());
-        }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(Map.of("message", "Blood camp not found"));
-    }
-
-    // Get Blood Camps by Hospital
-    @GetMapping("/hospital/{hospitalId}")
-    public ResponseEntity<?> getBloodCampsByHospital(@PathVariable Long hospitalId) {
-        Optional<Hospital> hospital = hospitalService.getHospitalById(hospitalId);
-        if (hospital.isPresent()) {
-            return ResponseEntity.ok(bloodCampService.getBloodCampsByHospital(hospital.get()));
-        }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(Map.of("message", "Hospital not found"));
-    }
+    
 
     // Update Blood Camp
     @PutMapping("/{id}")
