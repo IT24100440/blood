@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
-
+function Header() {
+  const location = useLocation();
+  const isInternal = location.pathname !== '/';
+  const [mobileOpen, setMobileOpen] = useState(false);
+  
+  const isAdminLoggedIn = localStorage.getItem('adminId');
+  const isDonorLoggedIn = localStorage.getItem('donorId');
 
   useEffect(() => {
     setMobileOpen(false);
