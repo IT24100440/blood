@@ -1,7 +1,16 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-
+// Public Pages
+import Home from './pages/Home/Home';
+import EmergencyRequests from './pages/EmergencyRequests/EmergencyRequests';
+import DonorNotifications from './componet/DonorNotifications/DonorNotifications';
+import BloodCamps from './pages/BloodCamps/BloodCamps';
+import BloodCampBooking from './pages/BloodCampBooking/BloodCampBooking';
+import AvailableBloodUnits from './pages/AvailableBloodUnits/AvailableBloodUnits';
+import HospitalNetwork from './pages/HospitalNetwork/HospitalNetwork';
+import BookAppointment from './pages/BookAppointment/BookAppointment';
+import AdminLogin from './pages/AdminLogin/AdminLogin';
 
 // Admin Pages
 import AdminDashboard from './pages/Admin/AdminDashboard/AdminDashboard';
