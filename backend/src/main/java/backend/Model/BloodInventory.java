@@ -34,17 +34,19 @@ public class BloodInventory {
     // Last updated timestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-
+// Default constructor
     public BloodInventory() {
+        // Set current date and time when object is created
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
-
+// Parameterized constructor
     public BloodInventory(BloodGroup bloodGroup, int quantity, LocalDate collectionDate, LocalDate expiryDate) {
         this.bloodGroup = bloodGroup;
         this.quantity = quantity;
         this.collectionDate = collectionDate;
         this.expiryDate = expiryDate;
+        // Set timestamps
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
