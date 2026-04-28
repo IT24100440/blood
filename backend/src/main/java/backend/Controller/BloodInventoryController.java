@@ -70,7 +70,7 @@ public class BloodInventoryController {
         BloodGroup bg = BloodGroup.valueOf(bloodGroup);
         return ResponseEntity.ok(bloodInventoryRepository.findByBloodGroup(bg));
     }
-    
+    // Get summary of total stock for each blood group
     @GetMapping("/summary")
     public ResponseEntity<?> getBloodStockSummary() {
         try {
@@ -87,7 +87,7 @@ public class BloodInventoryController {
                 .body(Map.of("message", "Error fetching summary: " + e.getMessage()));
         }
     }
-    
+    // Get blood groups with low stock
     @GetMapping("/low-stock")
     public ResponseEntity<?> getLowStockAlerts() {
         try {
@@ -114,7 +114,7 @@ public class BloodInventoryController {
                 .body(Map.of("message", "Error fetching low stock alerts: " + e.getMessage()));
         }
     }
-    
+    // Update inventory by ID
     @PutMapping("/{id}")
     public ResponseEntity<?> updateInventory(@PathVariable Long id, @RequestBody Map<String, Object> inventoryData) {
         try {
@@ -139,7 +139,7 @@ public class BloodInventoryController {
                 .body(Map.of("message", "Error updating inventory: " + e.getMessage()));
         }
     }
-    
+    // Mark expired blood automatically
     @PutMapping("/check-expired")
     public ResponseEntity<?> markExpiredBlood() {
         try {
@@ -161,7 +161,7 @@ public class BloodInventoryController {
                 .body(Map.of("message", "Error checking expired blood: " + e.getMessage()));
         }
     }
-    
+  // Delete inventory by ID  
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteInventory(@PathVariable Long id) {
         try {
