@@ -651,7 +651,45 @@ function AdminDashboard() {
     </div>
   );
 
- 
+  // Render Appointments
+  const renderAppointments = () => (
+    <div className="section-content">
+      <h2>Upcoming Appointments</h2>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Donor Name</th>
+              <th>Blood Group</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Donation Center</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {appointments.map((appointment) => (
+              <tr key={appointment.id}>
+                <td>{appointment.donor.user.name}</td>
+                <td><span className="blood-badge">{appointment.donor.bloodGroup}</span></td>
+                <td>{formatDate(appointment.appointmentDate)}</td>
+                <td>{appointment.appointmentTime}</td>
+                <td>{appointment.donationCenter}</td>
+                <td>
+                  <button
+                    className="btn-small btn-success"
+                    onClick={() => handleCompleteAppointment(appointment.id)}
+                  >
+                    Complete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 
   // Render Emergency Alerts
   const renderEmergencyAlerts = () => (
