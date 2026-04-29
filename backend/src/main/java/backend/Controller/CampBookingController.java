@@ -213,4 +213,3 @@ public class CampBookingController {
         return ResponseEntity.ok(response);
     }
 }
-
